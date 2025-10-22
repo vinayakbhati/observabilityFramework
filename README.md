@@ -93,11 +93,11 @@ The **Observability Framework** provides:
 ```json
 {
   "traceId": "b3c7d2a1-ff32-4f2d-b9fa-8c9a9b1edc01",
-  "api": { "path": "/v1/playback/segments/{segmentId}", "methodType": "GET" },
+  "api": { "path": "/v1/getData", "methodType": "GET" },
   "totalDurationMs": 1670,
   "tracePath": [
-    {"class": "controller", "method": "getData", "type": "INTERNAL"},
-    {"class": "DataBaseClient", "method": "getData", "type": "EXTERNAL", "interaction": "REST", "durationMs": 540}
+    {"class": "Controller", "method": "getData", "type": "INTERNAL"},
+    {"class": "OtherServiceClient", "method": "getData", "type": "EXTERNAL", "interaction": "REST", "durationMs": 540}
   ],
   "status": "SUCCESS"
 }
